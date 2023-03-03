@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Criar uma função de forma literal
+function fun1(){
+
+}
+//Armazenar em uma variavel 
+const fun2 = function (){}
+
+//Armazenar uma função em um vetor ou array
+//O valor do indice eh substituido por funcao 
+const array = [function(a,b){return a+b},fun1,fun2]
+console.log(array[0](2,3))
+
+//Armazenar uma função em um atributo de um objeto
+const obj = {}
+obj.falar = function(){return 'Olá'}
+console.log(obj.falar())
+
+//Passar uma função como parametro/argumento de outra função
+function run(fun){
+    fun()
+}
+run(function(){console.log('Executando Função...')})
+
+//mais outra maneira de armazenar funcao 
+function soma(a,b){
+    return function (c){
+console.log(a+b+c)
+    }
+}
+soma(1,2)(3)
+    </script>
+    
+</body>
+</html>

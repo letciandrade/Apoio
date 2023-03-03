@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function soma(a, b){
+            return a + b
+        }
+
+        //forma "normal"
+        console.log(soma(1,2))
+
+        //CUIDADO
+        console.log(soma())//ela espera parametros, sem eles a aplicação nao quebra porem avisa com um "NAN"
+        console.log(soma(2))//ela espera dois parametros entt ela nao quebra, mas avisa 
+        console.log(soma(1,2,4,5,6))//muitos parametros alem do se esperado executa oque se esperava e ignora o resto
+        console.log(soma(1, 'teste'))// concatena(junta basicamente) texto com o numero
+    </script>
+</body>
+</html>

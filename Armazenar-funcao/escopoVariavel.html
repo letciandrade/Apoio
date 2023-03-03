@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        //escopo global,a variavel vai ter acesso ao escopo da funcao e bloco
+        var banda1 = 'Metallica'
+        
+        function fun1(){ // escopo funcao
+            var banda2 = 'sepultura'
+            console.log(banda1)
+            console.log(banda2)
+
+            if(true){// escopo bloco, oq esta dentro da funcao, parece que nao pode sair variaveis daqeui
+                console.log(banda1)
+                console.log(banda2)
+                var banda3 = 'lamb of god'
+                console.log(banda3)
+            }
+            console.log(banda3)
+        }
+
+        fun1()
+        console.log(banda1)
+        console.log(banda2)
+        console.log(banda3)
+        
+    </script>
+</body>
+</html>
