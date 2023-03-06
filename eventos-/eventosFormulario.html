@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- eventos formulatio
+     Onfocus = recebe o foco
+    onblur = perde o foco
+    onchance = Quando muda o estado do elemento -->
+
+    <input type="text" onfocus="acao()" onblur="acao2()">
+
+    <select onchange = "acao()">
+        <option value="">...</option>
+        <option value="1">opcao1</option>
+        <option value="2">opcao2</option>
+    </select>
+
+    <script>
+        function acao(){
+            console.log('evento disparado')
+        }
+
+        function acao2(){
+            console.log('evento blur disparado')
+        }
+
+
+   </script>
+</body>
+</html>

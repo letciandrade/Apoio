@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     div{
+        width: 150px;
+        height: 150px;
+        background-color: aqua;
+     }
+    </style>
+</head>
+<body>
+    <!-- 
+        Eventos mouse
+        Onclick = um click 
+        Ondblclick = dois click 
+        Onmouseup = quando vc ta segurando o elemento e solta ele executa a acao
+        Onmouseover = quando coloca o mouse emcima do elemento
+        Onmouseout = quando tiramos o mouse emcima do elemento
+       -->
+
+       <!-- chamo a funcao para ativar ela nesse elemento -->
+ <div onmouseover="acao()" onmouseout="acao1"></div>  
+
+     <script>
+function acao(){
+    alert("Evento disparado")
+
+}
+
+function acao1(){
+    console.log('Evento out Disparado')
+}
+     </script>
+</body>
+</html>

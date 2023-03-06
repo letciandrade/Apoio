@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="entrada" onkeyup="distribuiCaracter()" type="text" placeholder="Digite um caracter">
+    <hr>
+    <span>Letras:</span>
+    <input type="text" id="apenas_letras"disabled>
+    <span>Numeros</span>
+    <input type="text" id="apenas_numeros"disabled>
+
+    <script>
+        function distribuiCaracter(){
+// console.log(document.getElementById('entrada').value)
+
+// selecionei o valor de campo e armazenei o valor do campo
+let caracter = document.getElementById('entrada').value
+console.log( caracter) //String
+
+//apagar o valor do campo
+document.getElementById('entrada').value = ''
+
+switch(caracter){
+    case '0':
+case'1':
+case'2': 
+case'3':
+case'4':
+case'5': 
+case'6':
+case'7':
+case'8': 
+    case'9':
+    document.getElementById('apenas_numeros').value += caracter
+    console.log('Digitou um número')
+    break
+
+    default:
+    document.getElementById('apenas_letras').value += caracter
+    console.log('Digitou uma letra')
+}
+//esse value serviu para dizer que a atribuicao é no valor. paara nao ficar confuso
+        }
+    </script>
+</body>
+</html>
