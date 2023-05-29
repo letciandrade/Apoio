@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Criação de objeto com chave/valor 
+        const produto = new Object 
+        produto.nome = 'Cadeira'
+        produto['marca produto'] = 'Genérica'
+        produto.preco = 200
+        console.log(produto)
+
+        delete produto.preco
+        delete produto['marca produto']
+        console.log(produto)
+
+        //dois pontos e a forma de atribuir o valor ao objeto e nao a igualdade(=)
+        const carro = {
+            modelo: 'A4',
+            valor: 89000,
+            propietario:{
+                nome:'joao',
+                idade:58,
+                endereco:{
+                    logradouro: 'RUA ABC',
+                    numero: 123,
+
+                },
+            },
+            //criou um array, e dentro do array tera valores de objeto({})
+            //usou array por que vai se repetir o numero de condutores
+            condutores: [{nome:'junior',idade:19}, {nome: 'Maria',idade:49}], CalcularValorSeguro(){
+
+
+            }
+        }
+        
+        console.log(carro.propietario.idade)
+        console.log(carro.propietario.endereco.logradouro)
+        console.log(carro.condutores[1].nome)
+        console.log(carro.condutores.forEach((nome)=>{console.log(nome)}))
+
+    </script>
+</body>
+</html>
